@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Images/dish.png" type="image/x-icon">
+
+    <!-- Remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+    <!-- Swiper's icon -->
+
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar" class="bg-yellow-200 fixed w-full top-0 left-0 z-50">
+        <nav class="container flex items-center justify-between h-16 sm:h-20">
+
+            <div class="flex items-center gap-5">
+                <img src="Images/dish.png" alt="logo" class="w-12">
+                <!-- <span class="text-3xl font-bold text-blue-700">Foodie</span> -->
+            </div>
+            <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full backdrop-blur-sm flex items-center justify-center duration-300">
+
+                <ul class="flex flex-col items-center gap-8 ">
+                    <li>
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#restaurants" class="nav-link">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contacts" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="absolute opacity-25 top-60 pointer-events-none">
+                    <img src="Images/img-3.png" alt="">
+                </div>
+
+                <div class="bottom-20 text-2xl absolute">
+                    <button class="nav-btns">Sign-in</button>
+                    <button class="nav-btns">Cart</button>
+                    
+                </div>
+
+                <div class="absolute text-4xl bottom-0 social-media">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-circle-line"></i>
+                    <i class="ri-twitter-line"></i>
+                    <i class="ri-youtube-line"></i>
+                </div>
+            </div>
+            
+            <div class="text-xl sm:text-3xl cursor-pointer hover:text-blue-600 z-50">
+                <i class="ri-menu-4-line" id="hamburger"></i>
+            </div>
+        </nav>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- npx tailwindcss -i ./src/input.css -o ./style.css --watch -->
