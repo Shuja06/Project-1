@@ -16,16 +16,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="navbar" class="bg-yellow-200 fixed w-full top-0 left-0 z-50">
+    <header id="navbar" class="bg-yellow-400 fixed w-full top-0 left-0 z-50">
         <nav class="container flex items-center justify-between h-16 sm:h-20">
 
-            <div class="flex items-center gap-5">
+            <div class="flex items-center gap-5 z-10">
                 <img src="Images/dish.png" alt="logo" class="w-12">
                 <!-- <span class="text-3xl font-bold text-blue-700">Foodie</span> -->
             </div>
-            <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full backdrop-blur-sm flex items-center justify-center duration-300">
+            <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full backdrop-blur-sm flex items-center justify-center duration-300 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:justify-between lg:gap-20 xl:static xl:w-auto">
 
-                <ul class="flex flex-col items-center gap-8 ">
+                <ul class="flex flex-col items-center gap-8 lg:flex-row">
                     <li>
                         <a href="#home" class="nav-link">Home</a>
                     </li>
@@ -42,17 +42,18 @@
                         <a href="#contacts" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
-                <div class="absolute opacity-25 top-60 pointer-events-none">
+                <div class="absolute opacity-25 top-60 pointer-events-none lg:hidden">
                     <img src="Images/img-3.png" alt="">
                 </div>
 
-                <div class="bottom-20 text-2xl absolute">
+                <div class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 lg:hidden xl:static xl:translate-x-0 xl:left-auto xl:bottom-auto xl:flex xl:gap-4">
+
                     <button class="nav-btns">Sign-in</button>
                     <button class="nav-btns">Cart</button>
                     
                 </div>
 
-                <div class="absolute text-4xl bottom-0 social-media">
+                <div class="absolute text-4xl bottom-0 social-media lg:hidden">
                     <i class="ri-instagram-line"></i>
                     <i class="ri-facebook-circle-line"></i>
                     <i class="ri-twitter-line"></i>
@@ -60,7 +61,7 @@
                 </div>
             </div>
             
-            <div class="text-xl sm:text-3xl cursor-pointer hover:text-blue-600 z-50">
+            <div class="text-xl sm:text-3xl cursor-pointer hover:text-blue-600 z-50 lg:hidden">
                 <i class="ri-menu-4-line" id="hamburger"></i>
             </div>
         </nav>

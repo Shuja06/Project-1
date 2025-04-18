@@ -9,7 +9,7 @@ body{
 }
 
 .nav-link{
-    @apply text-2xl font-bold duration-300;
+    @apply text-2xl font-bold duration-300  lg:text-[17px] xl:text-2xl;
 }
 
 .nav-link:hover{
