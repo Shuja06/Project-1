@@ -3,7 +3,7 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     screens: {
-      sm: "340px",
+      sm: "380px",
       md: "540px",
       lg: "768px",
       xl: "1180px"
@@ -19,7 +19,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "12PX",
+        DEFAULT: "12px",
         md: "32px"
       }
     }

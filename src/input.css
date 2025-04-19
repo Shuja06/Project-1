@@ -3,9 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
+ 
 body{
     @apply font-Jost tracking-wider;
+}
+
+section{
+    @apply py-20 md:py-28;
+}
+
+h1{
+    @apply text-6xl md:text-6xl xl:text-7xl font-bold; 
 }
 
 .nav-link{
@@ -21,9 +29,9 @@ body{
 }
 
 .nav-btns:hover{
-    @apply bg-slate-950
+    @apply bg-slate-950;
 }
 
 .social-media :hover{
-    @apply text-red-600
+    @apply text-red-600 cursor-pointer;
 }
