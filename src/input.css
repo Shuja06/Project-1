@@ -13,7 +13,7 @@ section{
 }
 
 h1{
-    @apply text-3xl md:text-4xl xl:text-5xl font-bold; 
+    @apply text-6xl md:text-6xl xl:text-7xl font-bold; 
 }
 
 .nav-link{
@@ -29,9 +29,9 @@ h1{
 }
 
 .nav-btns:hover{
-    @apply bg-slate-950
+    @apply bg-slate-950;
 }
 
 .social-media :hover{
-    @apply text-red-600
+    @apply text-red-600 cursor-pointer;
 }
