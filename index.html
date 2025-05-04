@@ -8,30 +8,34 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="Images/dish.png" type="image/x-icon">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
 
     <!-- Swiper's icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>Food Delivery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-white dark:bg-black transition-colors duration-1000">
 
     <!------------------ Header Section --------------->
 
-    <header id="navbar" class="bg--400 fixed w-full top-0 left-0 z-50">
+    <header id="navbar" class="bg-yellow-400 fixed w-full top-0 left-0 z-50 ">
         <nav class="container flex items-center justify-between h-16 sm:h-20">
 
-            <div class="flex items-center gap-5 z-10">
+            <div class="flex items-center z-10">
                 <img src="Images/dish.png" alt="logo" class="w-12">
-                <!-- <span class="text-3xl font-bold text-blue-700">Foodie</span> -->
+
             </div>
             <div id="nav-menu"
-                class="absolute top-0 left-[-100%] min-h-[80vh] w-full backdrop-blur-sm flex items-center justify-center duration-300 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:justify-between lg:gap-20 xl:static xl:w-auto">
+                class="absolute top-0 left-[-100%] min-h-[80vh] w-full backdrop-blur-sm flex items-center justify-center duration-300 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:justify-between lg:gap-20 xl:static xl:w-auto dark:text-white">
 
-                <ul class="flex flex-col items-center gap-8 lg:flex-row">
+                <ul class="flex flex-col items-center gap-8 lg:flex-row z-10 ">
                     <li>
                         <a href="#home" class="nav-link">Home</a>
                     </li>
@@ -39,10 +43,10 @@
                         <a href="#about" class="nav-link">About Us</a>
                     </li>
                     <li>
-                        <a href="#restaurants" class="nav-link">Restaurants</a>
+                        <a href="#services" class="nav-link">Services</a>
                     </li>
                     <li>
-                        <a href="#services" class="nav-link">Services</a>
+                        <a href="#restaurants" class="nav-link">Restaurants</a>
                     </li>
                     <li>
                         <a href="#contacts" class="nav-link">Contact Us</a>
@@ -53,23 +57,25 @@
                 </div>
 
                 <div
-                    class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 lg:hidden xl:static xl:translate-x-0 xl:left-auto xl:bottom-auto xl:flex xl:gap-4">
+                    class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 lg:hidden xl:static xl:translate-x-0 xl:left-auto xl:bottom-auto xl:flex xl:gap-4 items-center">
 
-                    <button class="nav-btns">Sign-in</button>
-                    <button class="nav-btns">Cart</button>
+                    <button class="bg-gradient-to-r from-[#FFA000] to-[#FF5722] hover:from-[#FF8F00] hover:to-[#E64A19] px-5 py-2 text-white font-bold text-2xl rounded-md">Cart</button>
+                    <button id="darkMode" class="dark-btn ">
+                        <div id="toggleCircle" class="circle-btn"></div>
+                    </button>
 
                 </div>
 
                 <div class="absolute text-4xl bottom-0 social-media lg:hidden">
-                    <i class="ri-instagram-line"></i>
-                    <i class="ri-facebook-circle-line"></i>
-                    <i class="ri-twitter-line"></i>
-                    <i class="ri-youtube-line"></i>
+                    <i class="ri-instagram-line duration-500"></i>
+                    <i class="ri-facebook-circle-line duration-500"></i>
+                    <i class="ri-twitter-line duration-500"></i>
+                    <i class="ri-youtube-line duration-500"></i>
                 </div>
             </div>
 
-            <div class="text-xl sm:text-3xl cursor-pointer hover:text-blue-600 z-50 lg:hidden">
-                <i class="ri-menu-4-line" id="hamburger"></i>
+            <div class="text-xl sm:text-2xl cursor-pointer hover:text-blue-600 z-50 lg:hidden">
+                <i class="ri-menu-4-line font-bold" id="hamburger"></i>
             </div>
         </nav>
     </header>
@@ -77,45 +83,531 @@
     <!------------------ Main section------------------>
 
     <main>
-        <section id="home">
-            <div>
-                <div class="container lg:h-[600px] lg:flex lg:items-center">
-                    <div class="flex flex-col items-center gap-5 lg:flex-row">
-                        <!-- Contents -->
-                        <div class="w-full space-y-5 lg:w-1/2 lg:flex lg:flex-col gap-5">
-                            <h1 class="mt-5">
-                                Have a
-                                Nice Meal
-                            </h1>
-                            <p class="text-slate-700 font-Lobster text-[20px] lg:text-2xl">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam veritatis
-                                voluptatem blanditiis voluptates eius.Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Aliquid nam veritatis voluptatem blanditiis voluptates eius.Lorem
-                                ipsum dolor sit
-                            </p>
+        <section id="home" class="relative">
+            <div class="container lg:h-[600px] lg:flex lg:items-center">
+                <div class="flex flex-col items-center gap-5 lg:flex-row">
+                    <!-- Contents -->
+                    <div class="home__data w-full space-y-5 lg:w-1/2 lg:flex lg:flex-col gap-5">
+                        <h1 class="mt-5 text-blue-600">
+                            Have a
+                            Nice Meal
+                        </h1>
+                        <p class="text-slate-700 font-Lobster text-[20px] lg:text-2xl">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam veritatis
+                            voluptatem blanditiis voluptates eius.Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Aliquid nam veritatis voluptatem blanditiis voluptates eius.Lorem
+                            ipsum dolor sit
+                        </p>
 
-                            <div class="flex gap-5 ">
-                                <button class="bg-red-500 px-5 py-2 rounded font-bold text-white">Sign-in</button>
-                                <button class="bg-blue-600 px-5 py-2 rounded font-bold text-white">Read more</button>
-                            </div>
-
-                            <div class="flex items-center gap-5 text-4xl social-media">
-                                <i class="ri-instagram-line text-slate-600"></i>
-                                <i class="ri-facebook-circle-line text-slate-600"></i>
-                                <i class="ri-twitter-line text-slate-600"></i>
-                                <i class="ri-youtube-line text-slate-600"></i>
-                            </div>
+                        <div class="flex gap-5 ">
+                            <button class="bg-gradient-to-r from-red-400 to-red-600 hover:from-red-500 hover:to-red-700 px-5 py-2 rounded font-bold text-white">Sign-in</button>
+                            <button class="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 px-5 py-2 rounded font-bold text-white">Read more</button>
                         </div>
 
-                        <div class="mt-4 lg:w-1/2">
-                            <img src="Images/img-2.png" class="sm:max-w-[350px] w-full h-auto xl:max-w-[550px]" alt=""> <!--animate-rotating-->
+                        <div class="flex items-center gap-5 text-4xl social-media">
+                            <i class="ri-instagram-line text-slate-600 duration-300"></i>
+                            <i class="ri-facebook-circle-line text-slate-600 duration-300"></i>
+                            <i class="ri-twitter-line text-slate-600 duration-300"></i>
+                            <i class="ri-youtube-line text-slate-600 duration-300"></i>
                         </div>
+                    </div>
+
+                    <div class="mt-4 lg:w-1/2">
+                        <img src="Images/img-2.png"
+                            class="home__image sm:max-w-[350px] w-full h-auto xl:max-w-[550px] animate-rotating" alt="">
+                        <!--animate-rotating-->
                     </div>
                 </div>
             </div>
+
         </section>
     </main>
 
+    <!----------------- Service section --------------->
+    <section id="services">
+
+        <div class="bg-yellow-100 py-20 dark:bg-gray-500 dark:text-white transition-colors duration-500">
+            <div class="service__card  container w-full grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 ">
+                <!-- card 1 -->
+                <div
+                    class="border border-red-700 dark:border-white p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300">
+                    <div class="flex items-center gap-5">
+                        <i class="ri-truck-line text-3xl md:text-4xl xl:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Fast <br>
+                            Delivery
+                        </p>
+                    </div>
+                    <p class="font-Lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, blanditiis deserunt. Enim,
+                        blanditiis
+                        deserunt.
+                    </p>
+                </div>
+
+                <!-- card 2 -->
+                <div
+                    class=" border border-red-700 dark:border-white  p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5">
+                    <div class="flex items-center gap-5">
+                        <i class="ri-customer-service-line text-3xl md:text-4xl xl:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Great Customer <br>
+                            Service
+                        </p>
+                    </div>
+                    <p class="font-Lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, blanditiis deserunt. Enim,
+                        blanditiis
+                        deserunt.
+                    </p>
+                </div>
+
+                <!-- card 3 -->
+                <div
+                    class="border border-red-700 dark:border-white  p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300">
+                    <div class="flex items-center gap-5">
+                        <i class="ri-bowl-line text-3xl md:text-4xl xl:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Healthy <br>
+                            Food
+                        </p>
+                    </div>
+                    <p class="font-Lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, blanditiis deserunt. Enim,
+                        blanditiis
+                        deserunt.
+                    </p>
+                </div>
+
+                <!-- card 4 -->
+                <div
+                    class="border border-red-700 dark:border-white  p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 ">
+                    <div class="flex items-center gap-5">
+                        <i class="ri-money-dollar-circle-line text-3xl md:text-4xl xl:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Affordable <br>
+                            Price
+                        </p>
+                    </div>
+                    <p class="font-Lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, blanditiis deserunt. Enim,
+                        blanditiis
+                        deserunt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------- About Us --------------------->
+
+    <section id="about" class="relative overflow-hidden">
+        <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20 dark:text-white duration-1000">
+            <h2 class="about__top title">About Us</h2>
+            <p class="about__top max-w-2xl text-2xl ">Follow instructions for more</p>
+        </div>
+
+        <div class="container space-y-10 xl:space-y-10 dark:text-white duration-1000">
+            <!-- item 1 -->
+            <div class="flex flex-col items-center lg:flex-row gap-5">
+                <!-- image -->
+                <div class="about__item__1-img w-full lg:w-1/2">
+                    <img src="Images/img-5.png" alt="about_img1" class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto">
+                </div>
+
+                <!-- content -->
+                <div class="about__item__1-content w-full lg:w-1/2">
+                    <div class="space-y-5">
+                        <h3>
+                            Order your <span class="text-yellow-500">Delicious</span> <br>
+                            Meal
+                        </h3>
+                        <p class="text-slate-600 font-Lobster">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa corporis blanditiis
+                            asperiores veniam iure mollitia officia atque, non praesentium quo earum voluptas eum ab
+                            alias voluptate molestias nam, deleniti natus placeat minima adipisci? Aspernatur fuga nam
+                            ut itaque? Animi reiciendis, iste tempora non numquam perferendis magni repellat minus
+                            recusandae praesentium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+                <!-- image -->
+                <div class="about__item__2-img w-full lg:w-1/2">
+                    <img src="Images/img-4.png" alt="about_img1" class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto">
+                </div>
+
+                <!-- content -->
+                <div class="about__item__2-content w-full lg:w-1/2">
+                    <div class="space-y-5">
+                        <h3>
+                            Eat <span class="text-yellow-500">Healthy</span> <br>
+                            be safe
+                        </h3>
+                        <p class="text-slate-600 font-Lobster">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa corporis blanditiis
+                            asperiores veniam iure mollitia officia atque, non praesentium quo earum voluptas eum ab
+                            alias voluptate molestias nam, deleniti natus placeat minima adipisci? Aspernatur fuga nam
+                            ut itaque? Animi reiciendis, iste tempora non numquam perferendis magni repellat minus
+                            recusandae praesentium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------- Restaurants ------------------->
+
+    <section id="restaurants" class="relative ">
+        <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20 dark:text-white duration-1000">
+            <h2 class="restaurant__top title">Restaurants</h2>
+            <p class="restaurant__top max-w-2xl text-2xl">Choose your restaurant and order</p>
+        </div>
+
+        <div class="container w-full  grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2 xl:grid-cols-3">
+
+            <!-- card 1 -->
+            <div
+                class="restaurant__card restaurant-card relative rounded-md w-full p-5 pt-0 mx-auto shadow-2xl shadow-black cursor-pointer bg-black text-white dark:bg-gray-600 dark:text-white transition-colors duration-1000">
+                <!-- Image -->
+                <img src="Images/img-6.png" alt="Carpertum" class="w-full  object-cover">
+
+                <div
+                    class="bg-orange-400 absolute px-6 py-4 left-1/2 transform -translate-x-24 top-44 rounded md:top-80 lg:top-52 lg:-translate-x-28 xl:-translate-x-28">
+                    <h2 class="font-bold xl:text-4xl">Carpertum</h2>
+                </div>
+
+                <!-- Description -->
+                <div class="pt-12 px-3 pb-4 flex flex-col gap-5">
+                    <p class="italic text-center">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas harum quasi sequi molestiae
+                        minima, eligendi cumque!
+                    </p>
+
+                    <!-- Button -->
+                    <button
+                        class="bg-gradient-to-r from-red-500 to-orange-400 hover:from-red-500 hover:to-orange-500 text-black font-semibold text-2xl py-4 px-4 rounded mx-6">
+                        Visit Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+                class="restaurant__card restaurant-card relative rounded-md w-full p-5 pt-0 mx-auto shadow-2xl shadow-black cursor-pointer bg-black text-white dark:bg-gray-600 dark:text-white transition-colors duration-1000">
+                <!-- Image -->
+                <img src="Images/img-7.png" alt="Carpertum" class="w-full object-cover">
+
+                <div
+                    class="bg-orange-400 absolute px-6 py-4 left-1/2 transform -translate-x-24 top-44 rounded md:top-80 lg:top-52 lg:-translate-x-28 xl:-translate-x-28">
+                    <h2 class="font-bold xl:text-4xl">Vesttibulun</h2>
+                </div>
+
+                <!-- Description -->
+                <div class="pt-12 px-3 pb-4 flex flex-col gap-5">
+                    <p class="italic text-center">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas harum quasi sequi molestiae
+                        minima, eligendi cumque!
+                    </p>
+
+                    <!-- Button -->
+                    <button
+                        class="bg-gradient-to-r from-red-500 to-orange-400 hover:from-red-500 hover:to-orange-500 text-black font-semibold text-2xl py-4 px-4 rounded mx-6">
+                        Visit Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+                class="restaurant__card restaurant-card relative rounded-md w-full p-5 pt-0 mx-auto shadow-2xl shadow-black cursor-pointer bg-black text-white dark:bg-gray-600 dark:text-white transition-colors duration-1000">
+                <!-- Image -->
+                <img src="Images/img-8.png" alt="Carpertum" class="w-full object-cover">
+
+                <div
+                    class="bg-orange-400 absolute px-6 py-4 left-1/2 transform -translate-x-24 top-44 rounded md:top-80 lg:top-52 lg:-translate-x-28 xl:-translate-x-24">
+                    <h2 class="font-bold xl:text-4xl">Convallis</h2>
+                </div>
+
+                <!-- Description -->
+                <div class="pt-12 px-3 pb-4 flex flex-col gap-5">
+                    <p class="italic text-center">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas harum quasi sequi molestiae
+                        minima, eligendi cumque!
+                    </p>
+
+                    <!-- Button -->
+                    <button
+                        class="bg-gradient-to-r from-red-500 to-orange-400 hover:from-red-500 hover:to-orange-500 text-black font-semibold text-2xl py-4 px-4 rounded mx-6">
+                        Visit Now
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!---------------- Company profile --------------->
+
+    <section class="xl:container xl:flex xl:flex-row lg:container xl:items-center xl:gap-10">
+        <div>
+            <video class="company__video" src="Images/cooking.mp4" autoplay muted loop></video>
+        </div>
+        <div class="compamy__profile container flex flex-col gap-5 mt-14">
+            <h2 class="mb-5 text-4xl font-bold text-yellow-400">Company Profile</h2>
+            <p class="text-lg font-Lobster dark:text-white duration-1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, dolores. Blanditiis, doloremque
+                totam animi provident dolorem officia repellendus sit quas reiciendis iure, molestias commodi amet.</p>
+            <div class="flex w-full justify-between lg:justify-around mt-5 ">
+                <i class=" fa-brands fa-whatsapp icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+                <i class="fa-brands fa-x-twitter icon"></i>
+            </div>
+        </div>
+    </section>
+
+
+    <!---------------- Review ------------------------>
+
+    <section id="Review" class="">
+
+        <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20 dark:text-white duration-1000">
+            <h2 class="reviews__top title">Customer Reviews</h2>
+            <p class="reviews__top max-w-2xl lg:text-2xl">Custmer experience and their reviews</p>
+        </div>
+
+        <div class="reviews__swipper container">
+            <div class="swiper py-12">
+                <ul class="swiper-wrapper">
+
+                    <li class="swiper-slide">
+                        <div
+                            class="flex flex-col gap-5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 rounded-md p-6 ">
+                            <p class="font-Lobster">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                                cupiditate repellat sapiente illum sequi placeat doloremque.</p>
+                            <div class="flex items-center">
+                                <img src="Images/img-11.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2">
+                                    <p class="text-white uppercase">John doe</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div
+                            class="flex flex-col gap-5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 rounded-md p-6 ">
+                            <p class="font-Lobster">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                                cupiditate repellat sapiente illum sequi placeat doloremque.</p>
+                            <div class="flex items-center">
+                                <img src="Images/img-10.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2">
+                                    <p class="text-white uppercase">John doe</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div
+                            class="flex flex-col gap-5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 rounded-md p-6 ">
+                            <p class="font-Lobster">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                                cupiditate repellat sapiente illum sequi placeat doloremque.</p>
+                            <div class="flex items-center">
+                                <img src="Images/img-12.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2">
+                                    <p class="text-white uppercase">John doe</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div
+                            class="flex flex-col gap-5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 rounded-md p-6 ">
+                            <p class="font-Lobster">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                                cupiditate repellat sapiente illum sequi placeat doloremque.</p>
+                            <div class="flex items-center">
+                                <img src="Images/img-13.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2">
+                                    <p class="text-white uppercase">John doe</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div
+                            class="flex flex-col gap-5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 rounded-md p-6 ">
+                            <p class="font-Lobster">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                                cupiditate repellat sapiente illum sequi placeat doloremque.</p>
+                            <div class="flex items-center">
+                                <img src="Images/img-14.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2">
+                                    <p class="text-white uppercase">John doe</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------- Contact Us -------------------->
+
+    <section id="contacts" class="flex flex-col gap-10 mb-32 mt-0 lg:flex-row xl:">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189761.2327774788!2d77.15409689937047!3d28.58584932312367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1711216787751!5m2!1sen!2sin"
+            width="700" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="map w-full">
+        </iframe>
+
+        <form action="" class="contact__form container flex flex-col gap-6 justify-center items-center  w-full lg:w-1/2 lg:mr-24 lg:container">
+            <h2 class="text-5xl font-bold dark:text-white duration-1000">Contact Us</h2>
+            <div class="flex items-center justify-center w-[22rem] ">
+                <input type="text" placeholder="Full Name" class="w-full px-3 py-3 rounded-lg shadow-[0_0_10px_rgba(141,141,141,0.5)] shadow-black dark:bg-black dark:shadow-white dark:text-white duration-1000 sm:w-72" required> 
+            </div>
+            <div class="flex items-center justify-center w-[22rem] ">
+                <input type="text" placeholder="Email Address" class="w-full px-3 py-3 rounded-lg shadow-[0_0_10px_rgba(141,141,141,0.5)] shadow-black dark:bg-black dark:shadow-white dark:text-white duration-1000 sm:w-72" required>
+            </div>
+            <div class="flex items-center justify-center w-[22rem]">
+                <textarea name="" id="" placeholder="Your message" class="w-full px-2 py-2 rounded-lg h-52 xl:h-60 shadow-[0_0_10px_rgba(141,141,141,0.5)] shadow-black dark:bg-black dark:shadow-white dark:text-white duration-1000 sm:w-72" required></textarea>
+            </div>
+            <button class=" flex items-center justify-center bg-gradient-to-r from-[#FFA000] to-[#FF5722] hover:from-[#FF8F00] hover:to-[#E64A19] px-6 py-4 rounded-md text-lg font-bold sm:w-72">
+                Send Message
+                <i class="fa-solid fa-paper-plane ml-2 hover:transform translate-y-1"></i>
+            </button>
+        </form>
+    </section>
+
+    <!---------------- Footer ------------------------>
+
+    <footer
+        class="bg-yellow-100 text-green-800 pt-20 pb-10 md:pt-28 relative sm:mt-20 md:mt-5 lg:mt-10 xl:mt-16 dark:bg-gray-500 dark:text-white transition-colors duration-1000">
+
+        <!-- newsletter -->
+        <div class="container text-white absolute top-0 right-0 left-0 -translate-y-1/2">
+            <!-- <div class="bg-red-600 px-10 pt-5 pb-10 space-y-5 rounded-md"> -->
+            <div
+                class="bg-red-600 dark:bg-[#CBD5E1] px-10 pt-5 pb-10 space-y-5 rounded-md text-white dark:text-[#1E293B] transition-colors duration-1000">
+                <h3>
+                    <span class="text-yellow-500 dark:text-blue-500 duration-1000">Subscribe</span>
+                    to our newsletter
+                </h3>
+
+                <div class="flex flex-col md:flex-row gap-1">
+                    <input type="email" placeholder="Your Email Address"
+                        class="w-full px-5 py-3 text-yellow-600 dark:text-[#1E293B] rounded-md outline-none border-2 border-transparent hover:border-black duration-500 dark:hover:border-[#64748B]">
+                    <!-- <button
+                        class="flex items-center justify-center gap-1 bg-red-800 px-5 py-3 rounded-md hover:opacity-80 duration-300"> -->
+                    <button
+                        class="flex items-center justify-center gap-1 bg-red-800 dark:bg-[#64748B] px-5 py-3 rounded-md hover:opacity-80 duration-1000 transition-colors">
+                        <span class="font-bold">Subscribe</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- social-icons -->
+        <div class="footer_icon container sm:mt-20 md:mt-4 xl:mt-12 mb-10">
+            <div class="relative border-b border-green-500 dark:border-white duration-1000">
+                <div class="absolute top-0 transform -translate-y-1/2 left-0 right-0 max-w-40 lg:max-w-48 mx-auto ">
+                    <div
+                        class="bg-yellow-100 text-2xl lg:text-3xl text-center space-x-2 cursor-pointer dark:bg-gray-500 dark:text-white transition-colors duration-1000">
+                        <i class="ri-instagram-line hover:text-red-700 dark:hover:text-black duration-500"></i>
+                        <i class="ri-facebook-circle-line hover:text-red-700 dark:hover:text-black duration-500"></i>
+                        <i class="ri-twitter-line hover:text-red-700 dark:hover:text-black duration-500"></i>
+                        <i class="ri-youtube-line hover:text-red-700 dark:hover:text-black duration-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div id="contacts"
+            class="footer__content container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center md:text-start z-10 relative">
+            <!-- item 1 -->
+            <div>
+                <div class="text-7xl text-green-700 text-center inline-block dark:text-white duration-1000">
+                    <i class="ri-restaurant-fill"></i>
+                    <p class="font-Lobster sm:text-5xl">Brunch</p>
+                </div>
+            </div>
+
+            <!-- items 2 -->
+            <div>
+                <p class="font-bold text-xl mb-5">Quick links</p>
+                <div class="flex flex-col gap-1">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#restaurants">Restaurants</a>
+                    <a href="#contacts">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- items 3 -->
+            <div>
+                <p class="font-bold text-xl mb-5">Popular Services</p>
+                <div class="flex flex-col gap-1">
+                    <a href="#">Fast Delivery</a>
+                    <a href="#">Great Customer Service</a>
+                    <a href="#">Healthy Food</a>
+                    <a href="#">Affordable Price</a>
+                </div>
+            </div>
+
+            <!-- items 4 -->
+            <div>
+                <p class="font-bold text-xl mb-5">Contact Us</p>
+                <div class="flex flex-col gap-1">
+                    <a href="tel:+917411876792">+91 7411 876 792</a>
+                    <a href="mailto:shujaali06@gmail.com">shujaali06@gmail.com</a>
+                    <br>
+                    <p>1234 Tailwind Ave, CSS City, Webland 56789, India</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div class="copy__right container z-10 relative">
+            <p class="text-center mt-10 opacity-60">Copyright &copy; 2025 LightCode. All rights reserved</p>
+        </div>
+
+    </footer>
+
+    <!--------------- Scroll Up ---------------------->
+
+    <a href="#" class="fixed -bottom-1/2 right-4 bg-yellow-400 shadow-sm inline-block px-3 py-1 md:px-4 md:py-4 rounded text-lg z-50 hover:-translate-y-1 duration-300" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--------------- Swiper Js ---------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--------------- Scroll Reveal ------------------>
+     <script src="js/scrollreveal.min.js"></script>
+
+    <!--------------- script Js ---------------------->
     <script src="script.js"></script>
 </body>
 

@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    @apply overflow-x-hidden scroll-smooth
+}
  
 body{
     @apply font-Jost tracking-wider;
@@ -16,6 +19,15 @@ h1{
     @apply text-6xl md:text-6xl xl:text-7xl font-bold; 
 }
 
+h2{
+    @apply text-3xl md:text-4xl xl:text-5xl;
+}
+
+h3{
+    @apply text-2xl md:text-3xl xl:text-4xl;
+}
+
+
 .nav-link{
     @apply text-2xl font-bold duration-300  lg:text-[17px] xl:text-2xl;
 }
@@ -24,6 +36,11 @@ h1{
     @apply text-blue-500;
 }
 
+.title{
+    @apply font-Lobster text-yellow-500; 
+}
+
+/* buttons */
 .nav-btns{
     @apply bg-[#090961] px-5 py-2 rounded text-white font-bold;
 }
@@ -34,4 +51,28 @@ h1{
 
 .social-media :hover{
     @apply text-red-600 cursor-pointer;
+}
+
+.restaurant-card{
+    @apply cursor-pointer transition-all duration-500
+}
+
+.restaurant-card:hover{
+    @apply transform scale-[1.03]
+}
+
+.swiper-pagination-bullet{
+    @apply bg-orange-500 w-4 h-4
+}
+
+.dark-btn{
+    @apply relative w-14 h-8 bg-gray-300 rounded-full dark:bg-gray-800 transition-colors duration-500
+}
+
+.circle-btn{
+    @apply absolute top-1 left-1 w-6 h-6 bg-blue-600 rounded-full transition-transform duration-500;
+}
+
+.icon{
+    @apply text-2xl bg-yellow-300 w-14 h-14 flex items-center justify-center rounded-full hover:border-2 border-yellow-400 hover:bg-white hover:text-yellow-400 duration-500 cursor-pointer dark:hover:bg-black;
 }
